@@ -50,7 +50,7 @@ export default function ToDo() {
 
     return (
         <div className='container my-3'>
-            <h1 className='h1' contentEditable>{`${days[date.getDay()]}`}, <span className='date'>{`${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`}</span></h1>
+            <h1 className='h1'>{`${days[date.getDay()]}`}, <span className='date'>{`${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`}</span></h1>
             <div className="main_content">
                 {tasks.map((task, index) => (
                     <TaskCard key={index} unique_key={index} title={task} delete_func={handleDelete} updateFunc={handleModification} />
